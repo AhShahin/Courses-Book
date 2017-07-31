@@ -1,0 +1,13 @@
+<div class="screen-container">
+
+  <button class="button button-highlight" routerLink="/lesson/new">Create Lesson</button>
+
+  <h2>Stateless Observable Services</h2>
+
+  <my-course-list [courses]="courses$ | async"></my-course-list>
+
+  <h2>Latest Lessons Published</h2>
+
+  <my-lesson-list [lessons]="latestLessons$ | async"></my-lesson-list>
+
+</div>

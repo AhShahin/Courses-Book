@@ -1,0 +1,9 @@
+.login-screen {
+  max-width: 300px;
+}
+
+.login-screen input {
+
+  width: 100%;
+  margin-bottom: 5px;
+}

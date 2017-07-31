@@ -1,0 +1,23 @@
+<my-messages></my-messages>
+
+<div class="course-md">
+
+  <h2>{{ (course$ | async)?.description }}</h2>
+
+  <div *ngIf="detail$ | async as lessonDetail; else masterTpl">
+    <button (click)="backToMaster()">Back</button>
+
+    <my-lesson-detail [lesson]="lessonDetail"></my-lesson-detail>
+  </div>
+
+  <ng-template #masterTpl>
+    <div class="lessons-nav">
+      <button (click)="previousLessonsPage()">Previous</button>
+      <button (click)="nextLessonsPage()">Next</button>
+    </div>
+
+    <my-lesson-list [lessons]="lessons$ | async"
+        (selected)="selectDetail($event)"></my-lesson-list>
+  </ng-template>
+
+</div>

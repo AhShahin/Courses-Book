@@ -1,3 +1,4 @@
-/**
- * Created by ahmed on 2017-06-06.
- */
+export interface User {
+  firstName: string;
+  lastName?:string;
+}
